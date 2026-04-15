@@ -9,15 +9,15 @@ This repository is highly inspired from Hydra but is simpler, faster, and custom
 
 UV
 
-pyproject.toml
 ```
-pip install "git+https://github.com/quentinletellier/experiment-launcher"
+uv add "git+https://github.com/quentinletellier/experiment-launcher"
 ```
 
 PIP
 
+pyproject.toml
 ```
-uv add "git+https://github.com/quentinletellier/experiment-launcher"
+pip install "git+https://github.com/quentinletellier/experiment-launcher"
 ```
 
 ## Features
