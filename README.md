@@ -94,6 +94,29 @@ Example:
 setup: "module purge; module load arch/h100; module load ffmpeg; export TMPDIR=YOUR_TEMP_DIR"
 ```
 
+## Parameters sweep
+
+The ```launcher.sweep``` section of the configuration allows to run an experiment with several parameter values. Typically, this is used for grid search of hyperparameters in machine learning.
+
+Simply name the desired parameter and indicate the list of values to test. The ```launch_experiment``` command will perform a cartesian product of the sweep parameters and run a process for each combination.
+
+With this configuration:
+
+```
+sweep:
+    key_1.sub_key_1: [option_1, option_2]
+    key_3: [option_1, option_2]
+```
+
+The following combinations will be tested:
+
+```
+key_1.sub_key_1: option_1, key_3: option_1
+key_1.sub_key_1: option_1, key_3: option_2
+key_1.sub_key_1: option_2, key_3: option_1
+key_1.sub_key_1: option_2, key_3: option_2
+```
+
 ## Argument parser
 
 The ```parse_args``` decorator can be used to automatically parse the ```--config``` and ```--output-dir``` arguments without writing the ```argparse``` code.
