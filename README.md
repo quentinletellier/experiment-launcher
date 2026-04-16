@@ -35,7 +35,7 @@ pip install "git+https://github.com/quentinletellier/experiment-launcher"
 ## Usage
 
 ```
-uv run src/experiment_launcher/launch.py --script YOUR_EXP_SCRIPT.py --config YOUR_CONFIG.yaml
+uv run launch_experiment --script YOUR_EXP_SCRIPT.py --config YOUR_CONFIG.yaml
 ```
 
 The given config should have the following structure:
